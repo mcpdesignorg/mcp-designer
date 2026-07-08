@@ -1,0 +1,5 @@
+src/
+tasks/
+spec/
+coverage/
+*.tsbuildinfo

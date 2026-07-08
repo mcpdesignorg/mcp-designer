@@ -1,0 +1,23 @@
+{
+  "name": "mcp-specification-workspace",
+  "version": "0.1.1",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "packages/core",
+    "packages/server",
+    "packages/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w mcp-designer",
+    "build": "npm run build -w @mcp-designer/core && npm run build -w @mcp-designer/web && npm run build -w mcp-designer",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run build -w @mcp-designer/core && npm run typecheck -w mcp-designer && npm run typecheck -w @mcp-designer/web"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}

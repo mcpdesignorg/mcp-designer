@@ -1,0 +1,42 @@
+{
+  "name": "mcp-designer",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "MCP Designer is a web-based tool for designing and validating MCP servers with the MCP Design Specification (MCPDS).",
+  "license": "MIT",
+  "bin": {
+    "mcp-designer": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/copy-web.mjs && node scripts/copy-runtime-deps.mjs",
+    "dev": "tsx src/index.ts",
+    "prepack": "npm --prefix ../../../spec run build && npm run build -w @mcp-designer/core && npm run build -w @mcp-designer/web && npm run build",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.5.0",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@mcp-designer/core": "0.1.1",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.12",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}
