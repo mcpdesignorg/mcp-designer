@@ -6,7 +6,7 @@
 
 [![npm](https://img.shields.io/npm/v/mcp-designer)](https://www.npmjs.com/package/mcp-designer)
 [![license](https://img.shields.io/npm/l/mcp-designer)](LICENSE)
-[![node](https://img.shields.io/node/v/mcp-designer)]()
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/mcpdesignorg/mcp-designer)
 
 ```bash
 npx mcp-designer
