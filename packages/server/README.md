@@ -7,6 +7,7 @@ truth.
 [![npm](https://img.shields.io/npm/v/mcp-designer)](https://www.npmjs.com/package/mcp-designer)
 [![license](https://img.shields.io/npm/l/mcp-designer)](https://github.com/mcpdesignorg/mcp-designer/blob/main/LICENSE)
 [![node](https://img.shields.io/node/v/mcp-designer)](https://www.npmjs.com/package/mcp-designer)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/mcpdesignorg/mcp-designer)
 
 ```bash
 npx mcp-designer [workspace-dir]
