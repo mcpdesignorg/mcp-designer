@@ -3,7 +3,6 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const uiRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../../..");
-const repoRoot = resolve(uiRoot, "..");
 const serverDist = resolve(uiRoot, "packages/server/dist");
 
 await copyCorePackage();
@@ -32,7 +31,7 @@ async function copyCorePackage() {
 }
 
 async function copySpecPackage() {
-  const source = resolve(repoRoot, "spec");
+  const source = resolve(uiRoot, "node_modules/@mcpds/spec");
   const target = resolve(serverDist, "node_modules/@mcpds/spec");
   const packageJson = JSON.parse(await readFile(resolve(source, "package.json"), "utf8"));
 

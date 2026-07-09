@@ -11,6 +11,7 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist",
+    "README.md",
     "package.json"
   ],
   "publishConfig": {
@@ -19,7 +20,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json && node scripts/copy-web.mjs && node scripts/copy-runtime-deps.mjs",
     "dev": "tsx src/index.ts",
-    "prepack": "npm --prefix ../../../spec run build && npm run build -w @mcp-designer/core && npm run build -w @mcp-designer/web && npm run build",
+    "prepack": "npm run build -w @mcp-designer/core && npm run build -w @mcp-designer/web && npm run build",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
