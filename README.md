@@ -60,6 +60,12 @@ directory. The server binds to `127.0.0.1` — nothing leaves your machine.
 <details>
 <summary>Install globally / other run options</summary>
 
+**Homebrew:**
+```bash
+brew install mcpdesignorg/tap/mcp-designer
+mcp-designer [workspace-dir]
+```
+
 **Global install:**
 ```bash
 npm install -g mcp-designer
